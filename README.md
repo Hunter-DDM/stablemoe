@@ -65,16 +65,16 @@ python -m torch.distributed.launch \
 ## Evaluate the Model
 After training, an example command to evaluate a 16-expert Stable-MoE model is as follows: 
 ```
-python -m torch.distributed.launch
+python -m torch.distributed.launch \
     --nproc_per_node=16 \
-    fairseq_cli/eval_lm.py $DATADIR
-    --path ../checkpoints/$jobname/checkpoint_best.pt
-    --tokens-per-sample 1024
-    --batch-size 8
-    --ddp-backend=legacy_ddp
-    --distributed-no-spawn
-    --fp16-no-flatten-grads
-    --fp16
+    fairseq_cli/eval_lm.py $DATADIR \
+    --path ../checkpoints/$jobname/checkpoint_best.pt \
+    --tokens-per-sample 1024 \
+    --batch-size 8 \
+    --ddp-backend=legacy_ddp \
+    --distributed-no-spawn \
+    --fp16-no-flatten-grads \
+    --fp16 \
     --save-each-rank
 ```
 
