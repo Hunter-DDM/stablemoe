@@ -12,7 +12,7 @@ python setup.py build_ext --inplace
 
 For language model, you can preprocess your own corpus with the ```fairseq-preprocess``` command. Please refer to the [official example](https://github.com/pytorch/fairseq/tree/main/examples/language_model) in fairseq for more details. If the corpus is too large, you may need to split it into shards for better efficiency. 
 
-## Train a Stable-MoE Language Model
+## Train a StableMoE Language Model
 
 An example training command to train a 16-expert StableMoE model (with 16 GPUs) is as follows: 
 ```
