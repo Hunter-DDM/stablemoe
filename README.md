@@ -14,7 +14,7 @@ For language model, you can preprocess your own corpus with the ```fairseq-prepr
 
 ## Train a Stable-MoE Language Model
 
-An example training command to train a 16-expert Stable-MoE model (with 16 GPUs) is as follows: 
+An example training command to train a 16-expert StableMoE model (with 16 GPUs) is as follows: 
 ```
 DATADIR=(the directory that saves the preprocessed data)
 jobname=(the job name)
@@ -63,7 +63,7 @@ python -m torch.distributed.launch \
 ```
 
 ## Evaluate the Model
-After training, an example command to evaluate a 16-expert Stable-MoE model is as follows: 
+After training, an example command to evaluate a 16-expert StableMoE model is as follows: 
 ```
 python -m torch.distributed.launch \
     --nproc_per_node=16 \
