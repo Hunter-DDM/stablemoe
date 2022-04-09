@@ -1,0 +1,23 @@
+optimizer:
+  _name: composite
+  groups:
+    default:
+      lr: [0.0006]
+      optimizer:
+        _name: adam
+        adam_betas: [0.9, 0.98]
+      lr_scheduler:
+        _name: polynomial_decay
+        total_num_update: 20000
+        warmup_updates: 1000
+    finetuning:
+      lr: [0.00006]
+      optimizer:
+        _name: adam
+        adam_betas: [0.9, 0.98]
+      lr_scheduler:
+        _name: polynomial_decay
+        total_num_update: 20000
+        warmup_updates: 1000
+
+lr_scheduler: pass_through
