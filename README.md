@@ -82,7 +82,21 @@ python -m torch.distributed.launch \
 
 If you use this code for your research, please kindly cite our ACL-2022 paper:
 ```
-will be specified later
+@inproceedings{dai2022stable,
+  author    = {Damai Dai and
+               Li Dong and
+               Shuming Ma and
+               Bo Zheng and
+               Zhifang Sui and
+               Baobao Chang and
+               Furu Wei},
+  title     = {StableMoE: Stable Routing Strategy for Mixture of Experts},
+  booktitle = {Proceedings of the 60th Annual Meeting of the Association for Computational
+               Linguistics (Volume 1: Long Papers), {ACL} 2022, Dublin, Ireland,
+               May 22-27, 2022},
+  pages     = {7085--7095},
+  year      = {2022},
+}
 ```
 
 ## Contact
